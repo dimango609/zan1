@@ -1,0 +1,27 @@
+using System;
+
+class Калантарян_ИС111_Z2_Вахрушев
+{
+    static void Main()
+    {
+        Pyramid(5);
+    }
+
+    static void Pyramid(int num)
+    {
+        int number = 1;
+        for (int i = 1; i <= num; i++)
+        {
+            for (int j = 1; j <= num - i; j++)
+            {
+                Console.Write(" ");
+            }
+            for (int k = 1; k <= i; k++)
+            {
+                Console.Write(number + " ");
+                number++;
+            }
+            Console.WriteLine();
+        }
+    }
+}

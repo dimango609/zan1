@@ -1,0 +1,35 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Введите тип показа из трех(Премьера, Обычный,Льготный)");
+        string showType = Console.ReadLine();
+        Console.WriteLine("Введите колво строк");
+        int rows = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Введите колво столбцов");
+        int columns = Convert.ToInt32(Console.ReadLine());
+
+        int totalSeats = rows * columns;
+        int totalIncome = 0;
+
+        switch (showType)
+        {
+            case "Премьера":
+                totalIncome = totalSeats * 600;
+                break;
+            case "Обычный":
+                totalIncome = totalSeats * 410;
+                break;
+            case "Льготный":
+                totalIncome = totalSeats * 250;
+                break;
+            default:
+                Console.WriteLine("Invalid show type!");
+                return;
+        }
+
+        Console.WriteLine("Total income: {0} рублей", totalIncome);
+    }
+}

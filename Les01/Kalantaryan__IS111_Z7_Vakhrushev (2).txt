@@ -1,0 +1,37 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Введите день");
+
+
+        int day = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Введите месяц");
+        int month = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Введите год");
+        int year = Convert.ToInt32(Console.ReadLine());
+
+        if (month < 1 || month > 12 || day < 1 || year < 1)
+        {
+            Console.WriteLine("Некоррект Дата");
+        }
+        else if ((month == 4 || month == 6 || month == 9 || month == 11) && day > 30)
+        {
+            Console.WriteLine("Некоррект Дата");
+        }
+        else if (month == 2 && day > 28)
+        {
+            Console.WriteLine("Некоррект Дата");
+        }
+        else if (month == 2 && day == 29 && year % 4 != 0)
+        {
+            Console.WriteLine("Некоррект Дата");
+        }
+        else
+        {
+            Console.WriteLine(" корректная Дата");
+        }
+    }
+}

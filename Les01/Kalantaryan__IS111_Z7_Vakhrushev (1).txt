@@ -1,0 +1,23 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int n = Convert.ToInt32(Console.ReadLine());
+        int m = Convert.ToInt32(Console.ReadLine());
+        int s = Convert.ToInt32(Console.ReadLine());
+
+        for (int i = m; i >= n; i--)
+        {
+            if (i % 2 == 0 && i % 3 == 0 && i != s)
+            {
+                Console.WriteLine(i);
+            }
+            if (i == s)
+            {
+                break;
+            }
+        }
+    }
+}
